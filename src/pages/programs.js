@@ -11,3 +11,14 @@ export default function Programs({ data }) {
     </>
   )
 }
+
+function formatDate(date) {
+  const obj = new Date(date)
+  return obj.toLocaleDateString()
+}
+
+function ageGroupToRange(group) {
+  return group.split("to")
+    .map(n => parseInt(n))
+    .join(" - ")
+}
