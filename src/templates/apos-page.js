@@ -7,7 +7,6 @@ export default function AposPage({ data }) {
   let subNav = []
   if (data.allSitePage && data.allSitePage.edges) {
     subNav = data.allSitePage.edges.map(e => {
-      console.log(e.node)
       return {
         title: e.node.context.title,
         slug: e.node.context.slug,
@@ -39,31 +38,8 @@ export default function AposPage({ data }) {
             </nav>
           )}
         </header>
-        {page._rendered && (
-          <div dangerouslySetInnerHTML={{ __html: page._rendered }} />
-        )}
       </>
     </Layout>
   )
 }
-export const query = graphql`
-  query($slug: String!, $slugregex: String!) {
-    aposCorePage(slug: { eq: $slug }) {
-      title
-      _rendered
-    }
-    allSitePage(
-      filter: { path: { regex: $slugregex } }
-      sort: { fields: [path], order: ASC }
-    ) {
-      edges {
-        node {
-          context {
-            title
-            slug
-          }
-        }
-      }
-    }
-  }
-`
+
