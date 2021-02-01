@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 
 export default function AposPage({ data }) {
-  const page = data.aposCorePage
+  const page = data && data.aposCorePage
   let subNav = []
 
   return (
