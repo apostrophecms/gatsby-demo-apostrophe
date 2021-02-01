@@ -18,5 +18,13 @@ module.exports = {
       },
     },
     // Add Apostrophe source plugin config here.
+    {
+      resolve: "gatsby-source-apostrophe",
+      options: {
+        apiKey: process.env.APOS_KEY,
+        baseUrl: "http://localhost:3000",
+        pieceTypes: ["program", "staff-member"],
+      },
+    },
   ],
 }

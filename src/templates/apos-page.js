@@ -38,6 +38,9 @@ export default function AposPage({ data }) {
             </nav>
           )}
         </header>
+        {page._rendered && (
+          <div dangerouslySetInnerHTML={{ __html: page._rendered }} />
+        )}
       </>
     </Layout>
   )
