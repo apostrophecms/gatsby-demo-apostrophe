@@ -2,7 +2,7 @@
   "name": "gatsby-demo-apostrophe",
   "private": true,
   "description": "A demo Gatsby site using the ApostropheCMS source plugin",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
